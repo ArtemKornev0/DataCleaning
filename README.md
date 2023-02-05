@@ -1,3 +1,3 @@
 # DataCleaningProject
 
-# Проект по очистке данных о квартирах в Москве и МО.
+# Project of data cleaning of Moscow Moscow region real estate.
