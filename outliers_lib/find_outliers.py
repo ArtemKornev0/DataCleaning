@@ -58,28 +58,3 @@ def find_outliers_z_score(data, feature, left=3, right=3, log_scale=False):
     outliers = data[(x < lower_bound) | (x > upper_bound)]
     cleaned = data[(x >= lower_bound) & (x <= upper_bound)]
     return outliers, cleaned
-
-
-def find_outliers_quantile(data, feature, left=1, right=99):
-    """
-    Находит выбросы в данных, используя метод задания левой и правой границ по квантилям.
-    Т.е. в процентах можно задать левую и правую границы  - левый и правый квантили, соответственно.
-    Использовано ручное управление для задания квантилей (границ распределения).
-    По умолчанию заданы 1 и 99 квантили.
-    Причем сами границы будут входить в очищенные данные.
-
-    Args:
-        data (pandas.DataFrame): набор данных
-        feature (str): имя признака, на основе которого происходит поиск выбросов
-        left (int, optional): Отступ от минимального значения в процентах от разности минимума и максимума значений. По умолчанию 1. Используется для задания квантиля для левой границы распределения.
-        right (int, optional): Отступ от минимального значения в процентах от разности минимума и максимума значений. По умолчанию 100. Используется для задания квантиля для правой границы распределения.
-
-    Returns:
-        _type_: _description_
-    """
-    x = data[feature]
-    lower_bound = x.quantile(float(left) / 100)
-    upper_bound = x.quantile(float(right) / 100)
-    outliers = data[(x<lower_bound) | (x > upper_bound)]
-    cleaned = data[(x>=lower_bound) & (x <= upper_bound)]
-    return outliers, cleaned
