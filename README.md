@@ -45,17 +45,16 @@
 Для упрощения демонстрации техники очистки данных мы будем отрабатывать на урезанном датасете. Он содержит информацию о 61 признаке, описывающих жилье. Файл с данными можно найти [здесь](./data/sber_data.csv).
 
 ## Используемые зависимости
-* Python (3.9):
-    * [numpy (1.20.3)](https://numpy.org)
-    * [pandas (1.3.4)](https://pandas.pydata.org)
-    * [matplotlib (3.4.3)](https://matplotlib.org)
-    * [seaborn (0.11.2)](https://seaborn.pydata.org)
+* Python 3.9
+* numpy 1.20.3
+* pandas 1.3.4
+* matplotlib 3.4.3
+* seaborn 0.11.2
 
 ## Установка проекта
+[git](https://github.com/ArtemKornev0/DataCleaning.git)
 
-```
-git clone https://github.com/SkillfactoryDS/DataCleaningProject
-```
+Нажать зеленую кнопку: <> Code, далее выбрать нужное (клонировать репозиторий, открыть на ПК или скачать его архив), при запуске кода в jupyter-ноутбуке необходимо учесть существующие зависимости.
 
 ## Использование
 Вся информация о работе представлена в jupyter-ноутбуке data_cleaning_example.ipynb.
